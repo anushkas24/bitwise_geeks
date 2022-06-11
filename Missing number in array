@@ -1,0 +1,13 @@
+int MissingNumber(vector<int>& array, int n) {
+        // Your code goes here
+        int xor_n = 0;
+        int xor_a = 0;
+        int i;
+        for(i=1;i<=n;i++)
+            xor_n ^= i;
+            
+        for(i=0;i<n-1;i++)
+            xor_a ^= array[i];
+            
+        return (xor_n ^ xor_a);
+}
