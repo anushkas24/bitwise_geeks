@@ -1,3 +1,4 @@
+/* C/C++ Solution */
 int MissingNumber(vector<int>& array, int n) {
         // Your code goes here
         int xor_n = 0;
@@ -11,3 +12,16 @@ int MissingNumber(vector<int>& array, int n) {
             
         return (xor_n ^ xor_a);
 }
+
+
+/* Python Solution */
+class Solution:
+    def MissingNumber(self,array,n):
+        # code here
+        xor_n = 0
+        xor_i = 0
+        for x in range(n+1):
+            xor_n ^= x
+        for i in array:
+            xor_i ^= i
+        return (xor_n ^ xor_i)
